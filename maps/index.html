@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi PWA</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/css/ol.css">
+    <script type="module" src="public/js/app.js" async></script>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.4.3/build/ol.js"></script>
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="../src/una.png" type="image/x-icon">
+    <title>Ubicacion</title>
+</head>
+
+<body>
+    <h1>Mi PWA</h1>
+    <div id="map"></div>
+    <div id="leyend"></div>
+    <div id="control">
+      <button id="getCurrentPosition" class="button button-desactive transition shadow"></button>
+      <button id="watchPosition" class="button button-desactive transition shadow"></button>
+    <!-- <img id="photo" class="photo">
+    <input type="file" accept="image/*" capture="camera" id="camera" /> -->
+    </div>
+    <script>
+        const photo = document.querySelector('#photo');
+        const camera = document.querySelector('#camera');
+        camera.addEventListener('change', function (e) {
+            photo.src = URL.createObjectURL(e.target.files[0]);
+        });
+    </script>
+</body>
+
+</html>
